@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAF1E2"
+    tools:context=".RegisterActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="สมัครสมาชิก"
+        android:textColor="#A97147"
+        android:textSize="30dp" />
+    <TableLayout
+        android:id="@+id/table"
+        android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TableRow android:gravity="center">
+            <TextView
+                android:id="@+id/nametxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ชื่อ :"
+                android:textSize="25sp"
+                android:textColor="#A97147"
+                android:layout_marginLeft="40dp"/>
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:textColor="#A97147"
+                android:layout_marginLeft="10dp"/>
+        </TableRow>
+        <TableRow android:gravity="center">
+            <TextView
+                android:id="@+id/lnametxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="นามสกุล :"
+                android:textSize="25sp"
+                android:textColor="#A97147"
+                android:layout_marginLeft="40dp" />
+            <EditText
+                android:id="@+id/lname"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:textColor="#A97147"
+                android:layout_marginLeft="10dp"/>
+        </TableRow>
+        <TableRow android:gravity="center">
+            <TextView
+                android:id="@+id/usrtxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ชื่อผู้ใช้งาน :"
+                android:textSize="25sp"
+                android:textColor="#A97147"
+                android:layout_marginLeft="40dp" />
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:textColor="#A97147"
+                android:layout_marginLeft="10dp"/>
+        </TableRow>
+        <TableRow android:gravity="center">
+            <TextView
+                android:id="@+id/passtxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nametxt"
+                android:text="รหัสผ่าน :"
+                android:textSize="25sp"
+                android:textColor="#A97147"
+                android:layout_marginLeft="40dp" />
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:textSize="25sp"
+                android:textColor="#A97147"
+                android:layout_marginLeft="10dp"/>
+        </TableRow>
+<!--        <TableRow android:gravity="center">
+            <TextView
+                android:id="@+id/passcontxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nametxt"
+                android:text="ยืนยันรหัสผ่าน :"
+                android:textSize="25sp"
+                android:textColor="#A97147"
+                android:layout_marginLeft="40dp" />
+            <EditText
+                android:id="@+id/passwordConf"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:textSize="25sp"
+                android:textColor="#A97147"
+                android:layout_marginLeft="10dp"/>
+        </TableRow>-->
+        <TableRow android:gravity="center">
+            <TextView
+                android:id="@+id/phonetxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nametxt"
+                android:text="โทรศัพท์ :"
+                android:textSize="25sp"
+                android:textColor="#A97147"
+                android:layout_marginLeft="40dp" />
+            <EditText
+                android:id="@+id/tel"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:textSize="25sp"
+                android:textColor="#A97147"
+                android:layout_marginLeft="10dp"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:textSize="25sp"/>
+        </TableRow>
+        <TableRow android:gravity="center">
+            <Button
+                android:id="@+id/btnReset"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Reset"
+                android:textAllCaps="false"
+                android:background="#FFE5B9"
+                android:textColor="#A97147"
+                android:onClick="onClickReset"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"/>
+            <Button
+                android:id="@+id/btnConfirm"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Confirm"
+                android:textAllCaps="false"
+                android:background="#FFD185"
+                android:textColor="#A97147"
+                android:onClick="onClickRegister"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"/>
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>

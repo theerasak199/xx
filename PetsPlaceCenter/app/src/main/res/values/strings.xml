@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Happy pets</string>
+    <string-array name="subjectName_array">
+        <item>นาย</item>
+        <item>นาง</item>
+        <item>นางสาว</item>
+    </string-array>
+</resources>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAF1E2"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/Logout"
+        android:layout_width="match_parent"
+        android:text="ออกจากระบบ"
+        android:textSize="25dp"
+        android:background="#FF693A"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:onClick="logout"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Happy pets"
+        android:textStyle="bold"
+        android:textSize="39sp" />
+
+    <ImageView
+        android:id="@+id/logoApp"
+        android:layout_width="match_parent"
+        android:layout_height="222dp"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="39dp"
+        android:layout_marginTop="10sp"
+        android:src="@drawable/logo" />
+
+    <Button
+        android:id="@+id/profile"
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:layout_below="@id/logoApp"
+        android:background="#FFE5B9"
+        android:textStyle="bold"
+        android:text="โปรไฟล์"
+        android:textColor="#A97147"
+        android:layout_marginTop="10sp"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/btnBooking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile"
+        android:background="#FFE5B9"
+        android:drawableTop="@drawable/icon"
+        android:text="จองคิวฝากสัตว์เลี้ยง"
+        android:textColor="#A97147"
+        android:layout_marginTop="20sp"
+        android:textSize="25sp"
+        android:onClick="onClickBooking"/>
+
+    <Button
+        android:id="@+id/btnCheck"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#FFE5B9"
+        android:drawableTop="@drawable/icon2"
+        android:text="ตรวจสอบการจอง"
+        android:textColor="#A97147"
+        android:layout_marginTop="20sp"
+        android:textSize="25sp"
+        android:onClick="onClickCheck"/>
+
+</LinearLayout>
