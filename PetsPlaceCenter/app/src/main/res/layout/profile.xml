@@ -19,7 +19,7 @@
         android:id="@+id/profileImg"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:src="@drawable/user"
+        android:src="@drawable/logo"
         />
 
     <!--TextView android:id="@+id/tel"

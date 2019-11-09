@@ -1,39 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FAF1E2"
-    tools:context=".BookingActivity"
-    android:orientation="vertical">
-
-    <Button
+    android:orientation="vertical"
+    tools:context=".ServiceDetailActivity">
+    <Button android:id="@+id/btnBack"
+        android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:text="กลับ"
         android:textSize="25dp"
         android:background="#FFE5B9"
         android:textStyle="bold"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
         android:onClick="back"
         />
 
     <TextView
-        android:id="@+id/title"
         android:layout_width="match_parent"
-        android:gravity="center"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:text="ค่าบริการโดยประมาณ"
         android:textStyle="bold"
-        android:text="จองสถานบริการรับฝากสัตว์เลี้ยง"
-        android:textColor="#A97147"
-        android:layout_marginBottom="20sp"
-        android:textSize="25dp" />
+        android:textAlignment="center"
+        android:textSize="25sp"/>
     <TableLayout
-        android:id="@+id/table"
-        android:layout_below="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center">
@@ -41,28 +33,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/title"
-                android:text="ชื่อสัตว์เลี้ยง :"
+                android:text="ประเภทสัตว์เลี้ยง :"
                 android:textSize="25sp"
                 android:textColor="#A97147"
                 android:layout_marginLeft="40dp"/>
-            <EditText
-                android:id="@+id/namePet"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:textSize="25sp"
-                android:textColor="#A97147"
-                android:layout_marginLeft="10dp"/>
-        </TableRow>
-        <TableRow>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="สถานบริการ :"
-                android:textSize="25sp"
-                android:textColor="#A97147"
-                android:layout_marginLeft="40dp"/>
-            <Spinner android:id="@+id/spinner_place"
+            <Spinner android:id="@+id/spinner_petType"
                 android:textSize="25sp"
                 android:textColor="#A97147">
             </Spinner>
@@ -71,35 +46,17 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/nametxt"
-                android:text="วันที่เข้าฝาก :"
+                android:text="น้ำหนักสัตว์เลี้ยง :"
                 android:textSize="25sp"
                 android:textColor="#A97147"
-                android:layout_marginLeft="40dp" />
-            <TextView
-                android:id="@+id/check_in"
-                android:layout_width="200dp"
+                android:layout_marginLeft="40dp"/>
+            <EditText android:id="@+id/petWeight"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:textSize="25sp"
                 android:textColor="#A97147"
-                android:text="__/__/__"
-                android:layout_marginLeft="10dp"/>
-        </TableRow>
-        <TableRow>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="วันที่รับกลับ :"
-                android:textSize="25sp"
-                android:textColor="#A97147"
-                android:layout_marginLeft="40dp" />
-            <TextView
-                android:id="@+id/check_out"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:textSize="25sp"
-                android:textColor="#A97147"
-                android:text="__/__/__"
+                android:hint="     กิโลกรัม"
+                android:inputType="number"
                 android:layout_marginLeft="10dp"/>
         </TableRow>
         <TableRow>
@@ -129,19 +86,42 @@
                     android:textSize="20sp" />
             </RadioGroup>
         </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="จำนวนวัน :"
+                android:textSize="25sp"
+                android:textColor="#A97147"
+                android:layout_marginLeft="40dp"/>
+            <EditText android:id="@+id/dayDeposit"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:textColor="#A97147"
+                android:inputType="number"
+                android:layout_marginLeft="10dp"/>
+        </TableRow>
     </TableLayout>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="จอง"
-        android:textSize="25sp"
-        android:textAllCaps="false"
+    <Button android:onClick="calculateBooking"
+        android:text="คำนวน"
         android:background="#FFD185"
         android:textColor="#A97147"
-        android:onClick="btnbooking"
-        android:layout_marginTop="20sp"
-        android:layout_marginRight="100dp"
-        android:layout_marginLeft="100dp"/>
-
+        android:textSize="21sp"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="ลด 10% เมื่อใช้บริการตั้งแต่ 7 วันขึ้นไป"
+        android:textSize="21sp"
+        android:textColor="#A97147"/>
+    <TextView android:id="@+id/calculateText"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textColor="#A97147"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 </LinearLayout>

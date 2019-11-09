@@ -11,6 +11,9 @@ data class PetsPlaceBooking(
     @SerializedName( "pet_name") val pet_name: String,
 
     @Expose
+    @SerializedName( "place_id") val place_id: Int,
+
+    @Expose
     @SerializedName( "check_in") val check_in: String,
 
     @Expose
@@ -20,5 +23,5 @@ data class PetsPlaceBooking(
     @SerializedName( "user_id") val user_id: Int,
 
     @Expose
-    @SerializedName( "price") val price: Int
+    @SerializedName( "room_id") val room_id: Int
 ){}

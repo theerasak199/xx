@@ -1,8 +1,13 @@
 <resources>
     <string name="app_name">Happy pets</string>
-    <string-array name="subjectName_array">
-        <item>นาย</item>
-        <item>นาง</item>
-        <item>นางสาว</item>
+    <string-array name="placeName_array">
+        <item>กรุณาเลือกสถานบริการ</item>
+        <item>ฟาร์มฮัก</item>
+        <item>วนิดาฟาร์ม</item>
+    </string-array>
+    <string-array name="petType_array">
+        <item>กรุณาเลือกประเภทสัตว์เลี้ยง</item>
+        <item>สุนัข</item>
+        <item>แมว</item>
     </string-array>
 </resources>

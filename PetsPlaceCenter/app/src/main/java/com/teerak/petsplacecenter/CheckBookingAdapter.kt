@@ -22,7 +22,13 @@ class CheckBookingAdapter(val items : List<PetsPlaceBooking>, val context: Conte
         holder.tvPet?.text = /*"Pet name : " +*/ items[position].pet_name
         holder.tvCheck_in?.text = items[position].check_in
         holder.tvCheck_out?.text = items[position].check_out
-        holder.tvPrice?.text = items[position].price.toString()
+        when (items[position].place_id) {
+            1 -> holder.tvPlace?.text = "ฟาร์มฮัก"
+            2 -> holder.tvPlace?.text = "วนิดาฟาร์ม"
+            else -> {
+                holder.tvPlace?.text = "ไม่ได้เลือกสถานบริการ"
+            }
+        }
     }
 }
 
@@ -30,6 +36,6 @@ class ViewHolder (view: View) : RecyclerView.ViewHolder(view) {
     val tvPet : TextView = view.tv_pet
     val tvCheck_in = view.tv_check_in
     val tvCheck_out = view.tv_check_out
-    val tvPrice = view.tv_price
+    val tvPlace = view.tv_place
 }
 

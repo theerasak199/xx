@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileActivity"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="#FAF1E2"
+    tools:context=".EditBookingActivity"
     android:orientation="vertical">
-
     <Button android:id="@+id/btnBack"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
@@ -18,105 +16,135 @@
         android:onClick="back"
         />
 
-    <ImageView
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:src="@drawable/user"/>
+        android:layout_height="wrap_content"
+        android:text="Edit/Delete Booking"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textSize="25sp"/>
+    <TextView
+        android:id="@+id/editBookID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ID:"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textColor="#A97147"
+        />
 
     <TableLayout
         android:id="@+id/table"
         android:layout_below="@+id/title"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TableRow android:gravity="center">
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <TableRow>
             <TextView
-                android:id="@+id/nametxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ชื่อ :"
+                android:layout_below="@+id/title"
+                android:text="ชื่อสัตว์เลี้ยง :"
                 android:textSize="25sp"
                 android:textColor="#A97147"
                 android:layout_marginLeft="40dp"/>
             <EditText
-                android:id="@+id/name"
+                android:id="@+id/editNamePet"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:textSize="25sp"
                 android:textColor="#A97147"
                 android:layout_marginLeft="10dp"/>
         </TableRow>
-        <TableRow android:gravity="center">
+        <TableRow>
             <TextView
-                android:id="@+id/lnametxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="นามสกุล :"
+                android:layout_below="@+id/title"
+                android:text="สถานบริการ :"
                 android:textSize="25sp"
                 android:textColor="#A97147"
-                android:layout_marginLeft="40dp" />
-            <EditText
-                android:id="@+id/lname"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:textSize="25sp"
-                android:textColor="#A97147"
-                android:layout_marginLeft="10dp"/>
-        </TableRow>
-        <TableRow android:gravity="center">
+                android:layout_marginLeft="40dp"/>
             <TextView
-                android:id="@+id/usrtxt"
+                android:id="@+id/editPlace"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ชื่อผู้ใช้งาน :"
-                android:textSize="25sp"
-                android:textColor="#A97147"
-                android:layout_marginLeft="40dp" />
-            <EditText
-                android:id="@+id/username"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
                 android:textSize="25sp"
                 android:textColor="#A97147"
                 android:layout_marginLeft="10dp"/>
         </TableRow>
-        <TableRow android:gravity="center">
+        <TableRow>
             <TextView
-                android:id="@+id/passtxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/nametxt"
-                android:text="รหัสผ่าน :"
+                android:text="วันที่เข้าฝาก :"
                 android:textSize="25sp"
                 android:textColor="#A97147"
                 android:layout_marginLeft="40dp" />
-            <EditText
-                android:id="@+id/password"
+            <TextView
+                android:id="@+id/edit_check_in"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword"
                 android:textSize="25sp"
                 android:textColor="#A97147"
+                android:text="__/__/__"
                 android:layout_marginLeft="10dp"/>
         </TableRow>
-        <TableRow android:gravity="center">
+        <TableRow>
             <TextView
-                android:id="@+id/phonetxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/nametxt"
-                android:text="โทรศัพท์ :"
+                android:text="วันที่รับกลับ :"
                 android:textSize="25sp"
                 android:textColor="#A97147"
                 android:layout_marginLeft="40dp" />
-            <EditText
-                android:id="@+id/tel"
+            <TextView
+                android:id="@+id/edit_check_out"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:inputType="phone"
+                android:textSize="25sp"
+                android:textColor="#A97147"
+                android:text="__/__/__"
+                android:layout_marginLeft="10dp"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:text="ห้องบริการ :"
+                android:textSize="25sp"
+                android:textColor="#A97147"
+                android:layout_marginLeft="40dp"/>
+            <TextView
+                android:id="@+id/editRoom"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
                 android:textSize="25sp"
                 android:textColor="#A97147"
                 android:layout_marginLeft="10dp"/>
         </TableRow>
     </TableLayout>
+
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#00E676"
+        android:text="Save"
+        android:textSize="20sp"
+        android:onClick="saveBooking" />
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#FF1744"
+        android:textColor="#FFFFFF"
+        android:text="Delete"
+        android:textSize="20sp"
+        android:onClick="deleteBooking" />
 
 </LinearLayout>
